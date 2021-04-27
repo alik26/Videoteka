@@ -1,0 +1,166 @@
+@CHARSET "UTF-8";
+
+
+
+body{
+	margin:0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	line-height:1.6;
+    background: #333;
+ 
+}
+*,
+*:before,
+*:after,
+*{
+	box-sizing:border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+}
+
+.container{
+	width:100%;
+	max-width:1200px;
+	margin:0 auto;
+}
+
+.intro{
+	width:100%;
+	height:100vh;
+	background: black;
+
+}
+
+.header{
+
+    padding-top:30px ;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+  
+}
+
+.header__logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color:#fff;
+    text-decoration: none;
+
+    transition: color .1s linear;
+
+}
+
+.nav__link:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    display: none;
+
+    background-color: #fce38a;
+    opacity: 0;
+
+    position: absolute;
+    top:100%;
+
+    left:0;
+    z-index: 1;
+
+    transition: opacity .1s linear ;
+}
+
+.nav__link:hover:after{
+    display: block;
+    opacity: 1;
+}
+
+.nav__link:hover{
+    color:#fce38a;
+}
+
+/* Section */
+
+.section{
+    padding: 25px 0;
+}
+.section__title{
+   color: white;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+.section__text{
+    font-size: 15px;
+    color:#999
+}
+.about{
+     display: grid;
+     grid-column-gap: 10px;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.about__item{
+    width: 300px;
+}
+.about__item:hover .about__img{
+    transform: translate3d(-5px,-5px,0);
+}
+
+.about__item:hover .about__img img{
+    opacity: .8;
+}
+
+.about__img{
+	width: 300px;
+    height: 450px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ccffff 100%);
+
+    transition: transform .2s linear;
+}
+
+.about__img img{
+    display: block;
+    transition: opacity .1s linear;
+}
+
+
+.about__title{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.about__price{
+    color: #999;
+    font-size: 15px;
+    font-weight: 500;
+}
+
